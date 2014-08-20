@@ -1,0 +1,8 @@
+<?php
+namespace Layout\%s;
+
+use Segony\Layout\LayoutController;
+
+class %sLayoutController extends LayoutController
+{
+}

@@ -1,0 +1,12 @@
+import:
+    - { resource: 'config.yml' }
+twig:
+    cache: false
+    debug: true
+debug:
+    enabled: true
+    memorize_bridge:
+        class: 'Segony\Debug\MemorizeBridge\FileSystemMemorizer'
+        options:
+            path: '%kernel.cache_dir%/debug'
+            threshold: 5

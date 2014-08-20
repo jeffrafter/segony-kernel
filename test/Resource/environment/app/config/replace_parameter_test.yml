@@ -1,0 +1,6 @@
+# Used by Segony\Config\ConfigLoaderTest
+firstname: %firstname%
+lastname: %lastname%
+child:
+    firstname: %child_firstname%
+    lastname: %child_lastname%

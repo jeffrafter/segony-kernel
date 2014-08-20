@@ -1,0 +1,20 @@
+<?php
+namespace Segment\%s;
+
+use Symfony\Component\Config\Definition\ConfigurationInterface;
+use Symfony\Component\Config\Definition\Builder\TreeBuilder;
+
+class %sSegmentConfig implements ConfigurationInterface
+{
+
+    public function getConfigTreeBuilder()
+    {
+        $treeBuilder = new TreeBuilder();
+        $rootNode = $treeBuilder->root('%s');
+
+        // ...
+
+        return $treeBuilder;
+    }
+
+}

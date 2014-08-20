@@ -1,0 +1,10 @@
+<script type="text/javascript">
+(function () {
+    var environment = '{{ environment }}',
+        information = {{ segmentInformation | json_encode }};
+
+    {% if config.debug.enabled == true %}
+    // INIT DEBUG
+    {% endif %}
+})();
+</script>

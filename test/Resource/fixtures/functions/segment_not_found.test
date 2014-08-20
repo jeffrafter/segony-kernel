@@ -1,0 +1,8 @@
+--TEST--
+"segment" not found
+--TEMPLATE--
+{{ segment('crap') }}
+--DATA--
+return array()
+--EXPECT--
+Twig_Error: Twig_Error_Runtime: An exception has been thrown during the rendering of a template ("Cannot find segment with the identifier "crap"") in "index.twig" at line 2 in "functions/segment_not_found.test".

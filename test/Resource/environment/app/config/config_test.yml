@@ -1,0 +1,4 @@
+routing:
+    test:
+        pattern: '/test/by/phpunit'
+        _site: '/valid'

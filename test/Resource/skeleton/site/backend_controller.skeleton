@@ -1,0 +1,8 @@
+<?php
+namespace Site\%s;
+
+use Segony\Site\SiteController;
+
+class %sSiteController extends SiteController
+{
+}

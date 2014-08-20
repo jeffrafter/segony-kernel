@@ -1,0 +1,8 @@
+<?php
+namespace Segment\%s;
+
+use Segony\Segment\SegmentController;
+
+class %sSegmentController extends SegmentController
+{
+}

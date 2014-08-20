@@ -1,0 +1,8 @@
+--TEST--
+"segment" exists
+--TEMPLATE--
+{{ segment('my_id') }}
+--DATA--
+return array()
+--EXPECT--
+phpunit
