@@ -41,11 +41,11 @@ class Kernel
      *
      * @api
      */
-    public function __construct($environment, $debug = false)
+    public function __construct($environment, $debug = false, $rootDir = null)
     {
         $this->environment = $environment;
         $this->debug       = (bool) $debug;
-        $this->rootDir     = realpath(__DIR__ . '/../..');
+        $this->rootDir     = (null !== $rootDir) ? $rootDir : realpath(__DIR__ . '/../..');
     }
 
     /**
@@ -155,7 +155,7 @@ class Kernel
         $container->register('string_helper', 'Segony\Service\StringHelper');
 
         // load di service configuration
-        $loader = new YamlFileLoader($container, new FileLocator(__DIR__ . '/../../app/config'));
+        $loader = new YamlFileLoader($container, new FileLocator($container->getParameter('kernel.root_dir') . '/app/config'));
         $loader->load('service.yml');
 
         // register the configuration loader to get all configs from app/config, app/layout, app/site as well as app/segment

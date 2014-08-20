@@ -74,6 +74,11 @@ class KernelTest extends FileSystemTestCase
             file_get_contents($this->resourceDir . '/environment/app/config/config_dev.yml')
         );
 
+        file_put_contents(
+            $this->workspace . '/app/config/service.yml',
+            file_get_contents($this->resourceDir . '/environment/app/config/service.yml')
+        );
+
         return $this;
     }
 
@@ -96,7 +101,7 @@ class KernelTest extends FileSystemTestCase
         <title>Just another test</title>
     </head>
     <body>
-        {{ segment.stuff }}
+        {{ segment('stuff') }}
         {{ content }}
     </body>
 </html>
@@ -177,17 +182,8 @@ EOT;
             $item = Request::createFromGlobals();
         }
 
-        $kernel = $this->getMock('Segony\Kernel', ['getKernelParameters'], ['dev', true]);
-        $kernel
-            ->expects($this->any())
-            ->method('getKernelParameters')
-            ->will($this->returnValue([
-                'kernel.root_dir'    => $this->workspace,
-                'kernel.cache_dir'   => $this->workspace . '/app/cache',
-                'kernel.environment' => 'dev',
-                'kernel.debug'       => false
-            ]))
-        ;
+
+        $kernel = new Kernel('dev', true, $this->workspace);
 
         return [$kernel->handle($item), $kernel];
     }

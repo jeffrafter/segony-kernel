@@ -5,7 +5,7 @@
 # file that was distributed with this source code.
 #
 
-.PHONY: install
+.PHONY: install test
 
 all: install
 
@@ -14,10 +14,10 @@ clean:
 	rm -rf ./vendor
 
 test:
-	php vendor/bin/phpunit
+	@php vendor/bin/phpunit
 
 docs:
-	php vendor/bin/phpdoc -d src/ -t dist/php-doc
+	@php vendor/bin/phpdoc -d src/ -t dist/php-doc
 
 install:
 	@make segony
@@ -44,6 +44,7 @@ help:
 	@echo "     install		Runs the installation"
 	@echo "     clean 		Clean up"
 	@echo "     docs		Generate the doc files"
+	@echo "		test		Runs PHPUnit"
 	@echo ""
 
 segony:

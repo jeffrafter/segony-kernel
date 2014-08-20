@@ -1,1 +1,0 @@
-{"twig":{"cache":false,"debug":true},"debug":{"enabled":true,"memorize_bridge":{"class":"Segony\\Debug\\MemorizeBridge\\FileSystemMemorizer","options":{"path":"\/Users\/mbinder\/Development\/segony\/test\/php\/Resource\/environment\/app\/cache\/debug","threshold":5}}},"website":{"title":"Test Environment","section_separator":"|"}}

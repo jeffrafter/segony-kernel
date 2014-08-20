@@ -49,7 +49,7 @@ class TestCase extends AbstractTestCase
      */
     protected function copySkeletonFile($skeleton, $destination, array $data = [])
     {
-        $skeleton = realpath(__DIR__ . '/../../../test/php/Resource/skeleton') . '/' . $skeleton . '.skeleton';
+        $skeleton = realpath(dirname(__FILE__) . '/../../../test/Resource/skeleton') . '/' . $skeleton . '.skeleton';
 
         if (false === file_exists($skeleton)) {
             throw new Exception(sprintf('Cannot find skeleton "%s"', $skeleton));

@@ -2,3 +2,5 @@
 vendor
 dist
 composer.phar
+test/Resource/environment/app/cache/*
+composer.lock
