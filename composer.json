@@ -1,5 +1,6 @@
 {
     "name": "godmodelabs/segony-kernel",
+    "type": "framework",
     "description": "Segony is a simple framework used for sites with recurring content segments.",
     "version": "0.0.1",
     "keywords": ["framework", "segony", "segment", "site", "layout", "php", "backend", "symfony"],
@@ -34,5 +35,11 @@
         "phpunit/phpunit": "4.1.4",
         "phpdocumentor/phpdocumentor": "2.6.1",
         "codeclimate/php-test-reporter": "dev-master"
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "master"
+        }
     }
 }
