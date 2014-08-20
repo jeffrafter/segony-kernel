@@ -36,10 +36,5 @@
         "phpdocumentor/phpdocumentor": "2.6.1",
         "codeclimate/php-test-reporter": "dev-master"
     },
-    "minimum-stability": "dev",
-    "extra": {
-        "branch-alias": {
-            "dev-master": "master"
-        }
-    }
+    "minimum-stability": "dev"
 }
