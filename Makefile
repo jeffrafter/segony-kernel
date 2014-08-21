@@ -7,16 +7,6 @@
 
 .PHONY: install test
 
-PHP55_EXECUTABLE = which php5x5
-
-ifndef PHP
-	ifdef PHP55_EXECUTABLE
-		PHP = php55
-	else
-		PHP = php
-	endif
-endif
-
 all: install
 
 clean:
@@ -24,10 +14,10 @@ clean:
 	rm -rf ./vendor
 
 test:
-	@$(PHP) vendor/bin/phpunit
+	@php vendor/bin/phpunit
 
 docs:
-	@$(PHP) vendor/bin/phpdoc -d src/ -t dist/php-doc
+	@php vendor/bin/phpdoc -d src/ -t dist/php-doc
 
 install:
 	@make segony
@@ -43,7 +33,7 @@ install:
 	@mkdir -p dist/
 	@curl -sS https://getcomposer.org/installer | php > /dev/null 2>&1
 	@echo ""
-	@$(PHP) composer.phar install
+	@php composer.phar install
 
 help:
 	@make segony
