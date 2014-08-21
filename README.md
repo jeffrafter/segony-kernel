@@ -1,7 +1,8 @@
 # godmodelabs/segony-kernel
 [![Code Climate](https://codeclimate.com/github/godmodelabs/segony-kernel/badges/gpa.svg)](https://codeclimate.com/github/godmodelabs/segony-kernel) [![Test Coverage](https://codeclimate.com/github/godmodelabs/segony-kernel/badges/coverage.svg)](https://codeclimate.com/github/godmodelabs/segony-kernel) [![Build Status](https://travis-ci.org/godmodelabs/segony-kernel.svg?branch=master)](https://travis-ci.org/godmodelabs/segony-kernel)
 
-Segony is a simple framework used for sites with recurring content segments. You can configure every segment separately and combine them with different views.
+> Segony is a simple framework used for sites with recurring content segments. You can configure every segment separately and combine them with different views.
+
 The framework consists of "sites", "layouts" and "segments". These can be configured separately. This is how it works:
 
 - Kernel `initialize`
