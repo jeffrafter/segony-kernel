@@ -4,7 +4,7 @@ php:
     - '5.4'
     - '5.5'
     - '5.6'
-script: './dist/deps/php/bin/phpunit'
+script: 'make test'
 after_script: 'php ./dist/deps/php/bin/test-reporter --coverage-report ./dist/php-coverage-clover.xml'
 addons:
     code_climate:
