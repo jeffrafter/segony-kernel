@@ -8,4 +8,4 @@ script: 'make test'
 after_script: 'php ./dist/deps/php/bin/test-reporter --coverage-report ./dist/php-coverage-clover.xml'
 addons:
     code_climate:
-        repo_token: 'd8e26171a1912c22238cf7c48e83f8561c4befc07ed6d706157e1b47f21878fa'
+        repo_token: '6fe40ad4db7325cd23ffce1fa21af391ae264a87c1d0ee0e17c36764a96ac61c'
